@@ -472,3 +472,13 @@ iframe {
 		object-fit: cover;
 	}
 }
+
+.shadow {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	box-shadow: 0px 0px 75px 10px rgba(0, 0, 0, 0.75) !important;
+	height: 100vh;
+	z-index: -1;
+}

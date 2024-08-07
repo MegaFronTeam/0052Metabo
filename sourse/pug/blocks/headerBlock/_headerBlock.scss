@@ -5,8 +5,10 @@
 	// --sTPB: #{rem()}; 
 	min-height: 100vh;
 	min-height: calc(var(--vh, 1vh) * 100);
-	
-	
+	.container {
+		background-color: #fff;
+
+	}
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
@@ -24,7 +26,6 @@
 	&__slide{
 		height: auto;
 	}
-
 	@include media-breakpoint-up(xl) {}
 
 	@include media-breakpoint-up(lg) {}
