@@ -2,27 +2,57 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
+	padding: rem(6) 0 rem(10.800);
 	&__row{
-		// --bs-gutter-x: #{rem()};
-		// @include media-breakpoint-up(md) {
-			--bs-gutter-y: var(--bs-gutter-x);
-		// }
+		--bs-gutter-x: #{rem(12)};
+		// --bs-gutter-y: var(--bs-gutter-x);
 
+		align-items: center;
 	}
-	.section-title{
-		
+	&__col {
+		text-align: right;
+		input {
+			background-color: #fff;
+			border: 1px solid rgba($color: #000000, $alpha: .25);
+			border-radius: 0;
+			width: 100%;
+			max-width: rem(255);
+			margin-left: auto;
+			margin-bottom: rem(7);
+			font-size: rem(12);
+			padding: rem(6);
+			line-height: 1.15;
+			&::placeholder {
+				color: rgba($color: #000000, $alpha: .5);
+			}
+			&:focus {
+				background-color: #fff;
+				border: 1px solid rgba($color: #000000, $alpha: .25);
+			}
+			@include media-breakpoint-down(sm) {
+				margin: 0 rem(12) rem(6) rem(12);
+			}
+		}
 	}
-	&__col{
+	.logo {
+		width: 100%;
+		max-width: rem(235);
+	}
 
+	&__contact {
+		font-size: rem(14);
+		color: #fff;
+		line-height: 1.15;
+		margin-bottom: rem(8);
+		display: inline-block;
+		border-bottom: 1px solid transparent;
+		@include media-breakpoint-down(sm) {
+			margin: 0 rem(12) rem(6) rem(12);
+		}
+		&:hover {
+			border-bottom-color: #fff;
+		}
 	}
-	&__item{
-
-	}
-	&__slide{
-		height: auto;
-	}
-
-
 	@include media-breakpoint-up(sm) {}
 	
 	@include media-breakpoint-up(xs) {}
