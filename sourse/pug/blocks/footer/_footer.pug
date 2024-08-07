@@ -1,9 +1,36 @@
 mixin footer()
 	+b.FOOTER.footer.section
 		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
+			+e.row.row
+				+e.col.col-auto
+					h6 Юридическая<br/>информация
+					ul 
+						li: a(href="#") Политика конфеденциальности 
+						li: a(href="#") Условия использования
+						li: a(href="#") Информация о файлах cookie 
+				+e.col.col-auto
+					h6 Услуги
+					ul 
+						li: a(href="#") Запчачти
+						li: a(href="#") Инструкции по эксплуатации
+						li: a(href="#") Гарантия XXL
+				+e.col.col-auto
+					h6 О нас
+					ul 
+						li: a(href="#") О компании
+						li: a(href="#") Вакансии
+						li: a(href="#") Контакты
+				+e.col.col
+					+e.wrap
+						h6 мы в Социальных сетях
+						+soc()
+			+e.bottom-row.row
 				.col-auto
+					+e.link(href="#")
+						| Основные категории
+						+icon('chevron-up') 
+				.col-auto
+					+e.link(href="#")
+						| Лучшие решения
+						+icon('chevron-up') 
+				.col-auto.ms-md-auto: +img('img/logo.png').res-i
