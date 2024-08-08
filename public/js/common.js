@@ -59,6 +59,21 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true,
 	});
+
+	const headerBlockЫwiper = new Swiper(".headerBlock__slider--js", {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		loop: true,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		pagination: {
+			el: " .swiper-pagination",
+			type: "bullets",
+			clickable: true,
+		},
+	});
 }
 if (document.readyState !== "loading") {
 	eventHandler();
