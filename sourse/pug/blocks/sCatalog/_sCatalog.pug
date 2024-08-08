@@ -1,41 +1,37 @@
-mixin product-item(i, t, p ,pr)
+mixin product-item(i, t)
 	+b.ARTICLE.product-item
 		+e.img-wrap(href="#")
-			//- если надо картинку по центру  вывести использовать обертку .img-wrap-center  - если нет- убираем
 			.img-wrap-center 
-				+img(`img/prod-${i}.jpg`)
+				+img(`img/prod-${i}.png`)
 		+e.caption
 			+e.title!= t
-			+e.text!= p
-			+e.price!= pr
-			+e.btn(href='#')
 	// /.product-item
 
-mixin sCatalog(h2)
+mixin sCatalog()
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sCatalog
-				p Выкупаем проблемные автомобили в день обращения
-
-			+e.row.row
-				- const wrapClass="col-3"
-				+e.col(class= wrapClass)
-					+product-item(`1`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`2`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`3`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`4`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`5`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`6`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`7`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`8`,``,``,``) 
-
+			+e.slider--js.swiper
+				+arrow
+				.swiper-wrapper
+					+e.slide.swiper-slide
+						+product-item(`1`,`RM 36-18 LTX BL 36 (601716650) Аккумуляторная`) 
+					+e.slide.swiper-slide
+						+product-item(`2`,`SSW 18 LTX 800 BL (602403840) Аккумуляторный`) 
+					+e.slide.swiper-slide
+						+product-item(`3`,`SSW 18 LTX 1750 BL (602402840) Аккумуляторный`) 
+					+e.slide.swiper-slide
+						+product-item(`4`,`LF 850 ​​S (601049500) Средство для удаления краски`) 
+					+e.slide.swiper-slide
+						+product-item(`5`,`KGS 18 LTX BL 216 (614216650) Аккумуляторная`) 
+					+e.slide.swiper-slide
+						+product-item(`1`,`RM 36-18 LTX BL 36 (601716650) Аккумуляторная`) 
+					+e.slide.swiper-slide
+						+product-item(`2`,`SSW 18 LTX 800 BL (602403840) Аккумуляторный`) 
+					+e.slide.swiper-slide
+						+product-item(`3`,`SSW 18 LTX 1750 BL (602402840) Аккумуляторный`) 
+					+e.slide.swiper-slide
+						+product-item(`4`,`LF 850 ​​S (601049500) Средство для удаления краски`) 
+					+e.slide.swiper-slide
+						+product-item(`5`,`KGS 18 LTX BL 216 (614216650) Аккумуляторная`) 
 	// end sCatalog

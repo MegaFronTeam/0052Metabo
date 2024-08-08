@@ -60,7 +60,7 @@ function eventHandler() {
 		freeModeMomentum: true,
 	});
 
-	const headerBlockЫwiper = new Swiper(".headerBlock__slider--js", {
+	const headerBlockSwiper = new Swiper(".headerBlock__slider--js", {
 		slidesPerView: 1,
 		spaceBetween: 10,
 		loop: true,
@@ -72,6 +72,29 @@ function eventHandler() {
 			el: " .swiper-pagination",
 			type: "bullets",
 			clickable: true,
+		},
+	});
+	const sCatalogkSwiper = new Swiper(".sCatalog__slider--js", {
+		slidesPerView: 2,
+		spaceBetween: 20,
+		loop: true,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		breakpoints: {
+			640: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+			998: {
+				slidesPerView: 4,
+				spaceBetween: 82,
+			},
+			1400: {
+				slidesPerView: 5,
+				spaceBetween: 82,
+			},
 		},
 	});
 }
