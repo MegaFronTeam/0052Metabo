@@ -1,9 +1,19 @@
 .footer {
-	--sPT: #{rem(48)};
-	--sPB: #{rem(10)};
+	--sPT: #{rem(24)};
+	--sPB: #{rem(0)};
 	// --sTPB: #{rem()};
 
 	margin-top: auto;
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(48)};
+	}
+	.container {
+		--bs-gutter-x: #{rem(24)};
+
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-x: #{rem(48)};
+		}
+	}
 	&__row {
 		--bs-gutter-x: #{rem(20)};
 		--bs-gutter-y: #{rem(12)};
@@ -12,7 +22,7 @@
 		@include media-breakpoint-up(xxl) {
 			--bs-gutter-x: #{rem(63)};
 
-			margin-bottom: rem(35);
+			margin-bottom: rem(27);
 		}
 	}
 	&__col {
@@ -25,7 +35,7 @@
 		letter-spacing: 0.05rem;
 		text-transform: uppercase;
 		color: #fff;
-		margin-bottom: rem(12);
+		margin-bottom: rem(18.4);
 		font-weight: 400;
 	}
 	ul {
@@ -63,8 +73,15 @@
 	&__link {
 		color: #fff;
 		border-bottom: 1px solid transparent;
+		text-transform: uppercase;
+		font-size: rem(14);
+		display: block;
+		letter-spacing: 0.05rem;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(10);
+		}
 		.icon {
-			margin-left: rem(8);
+			margin-left: rem(1.6);
 		}
 		&:hover {
 			border-bottom-color: #fff;

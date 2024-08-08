@@ -4,10 +4,14 @@
 	--sPB: #{rem(0)};
 	// --sTPB: #{rem()};
 	.container {
+		--bs-gutter-x: #{rem(24)};
+
 		padding-top: rem(24);
 		padding-bottom: rem(24);
 		background-color: #fff;
 		@include media-breakpoint-up(lg) {
+			--bs-gutter-x: #{rem(48)};
+
 			padding-top: rem(48);
 			padding-bottom: rem(64);
 		}
@@ -17,11 +21,19 @@
 		font-weight: 700;
 		line-height: 1.15;
 		margin-bottom: rem(16);
-		letter-spacing: 0.05rem;
+		letter-spacing: 0.067rem;
+		font-size: rem(18);
+		@include media-breakpoint-up(md) {
+			font-size: rem(21);
+		}
 	}
 	p {
 		line-height: 1.2;
 		margin-bottom: 0;
+		font-size: rem(14);
+		@include media-breakpoint-up(md) {
+			font-size: rem(16);
+		}
 	}
 	@include media-breakpoint-up(xl) {
 	}
