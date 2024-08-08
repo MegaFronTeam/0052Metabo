@@ -1,0 +1,40 @@
+// start .sInfo
+.sInfo {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(0)};
+	// --sTPB: #{rem()};
+	.container {
+		padding-top: rem(24);
+		padding-bottom: rem(24);
+		background-color: #fff;
+		@include media-breakpoint-up(lg) {
+			padding-top: rem(48);
+			padding-bottom: rem(64);
+		}
+	}
+	h5 {
+		text-transform: uppercase;
+		font-weight: 700;
+		line-height: 1.15;
+		margin-bottom: rem(16);
+		letter-spacing: 0.05rem;
+	}
+	p {
+		line-height: 1.2;
+		margin-bottom: 0;
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sInfo
