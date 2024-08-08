@@ -64,7 +64,7 @@
 			#214f48 100%
 		);
 		@include media-breakpoint-up(md) {
-			padding: rem(32) rem(24) rem(24) rem(24);
+			padding: rem(32) rem(24) rem(23) rem(24);
 		}
 		h6 {
 			font-weight: 700;
@@ -96,6 +96,15 @@
 			font-size: rem(10);
 			margin-left: rem(8);
 			color: $red;
+		}
+		span {
+			@include mt;
+			border-bottom: 1px solid transparent;
+		}
+		&:hover {
+			span {
+				border-bottom-color: #fff;
+			}
 		}
 	}
 	&__card {
