@@ -97,13 +97,6 @@ function eventHandler() {
 			},
 		},
 	});
-
-	$(".sAbout__open-img").on("click", e => {
-		$(e.currentTarget.parentElement)
-			.toggleClass("hide")
-			.find(".sAbout__img-wrap")
-			.toggle("slow", "swing");
-	});
 }
 if (document.readyState !== "loading") {
 	eventHandler();
