@@ -18,6 +18,8 @@
 		}
 	}
 	&__item {
+		--s: 0.64s;
+
 		position: relative;
 		height: 100%;
 		background-color: $green;
@@ -34,8 +36,8 @@
 					position: absolute;
 					display: block;
 					width: rem(24);
-					height: rem(60);
-					bottom: rem(86);
+					height: rem(48);
+					bottom: calc(100% - rem(24));
 					right: rem(16);
 				}
 				&:has(.sAbout__open-img:hover),
@@ -58,6 +60,7 @@
 			}
 			.sAbout__content {
 				@include mt;
+				--s: 0.64s;
 				display: flex;
 				flex-direction: column;
 				padding: rem(24) rem(16) rem(16) rem(16);
@@ -91,10 +94,10 @@
 			}
 			&.sAbout__item--large {
 				.sAbout__content {
-					&:has(.sAbout__open-img:hover),
-					&:hover {
-						padding-top: rem(48);
-					}
+					padding-top: rem(48);
+					// &:before {
+					// 	bottom: rem(134.4);
+					// }
 				}
 			}
 		}
