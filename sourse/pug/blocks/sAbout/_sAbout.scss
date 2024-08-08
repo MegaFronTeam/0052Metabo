@@ -41,8 +41,34 @@
 			}
 		}
 	}
+	&__wrap {
+		position: relative;
+		&.hide {
+			.sAbout__open-img {
+				transform: rotateX(180deg) translateY(-32px);
+			}
+		}
+	}
+	&__open-img {
+		@include mt;
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: rem(24);
+		height: rem(24);
+		background-color: $green;
+		color: #fff;
+		right: rem(16);
+		bottom: 0;
+		cursor: pointer;
+		.icon {
+			font-size: rem(11.2);
+		}
+	}
 	&__img-wrap {
 		@include block(155, 405);
+		width: 100% !important;
 		& ~ .sAbout__content {
 			padding: rem(16);
 			@include media-breakpoint-up(md) {
